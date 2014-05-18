@@ -12,6 +12,8 @@ from email.MIMEAudio import MIMEAudio
 from email.MIMEImage import MIMEImage
 from email.Encoders import encode_base64
 import amazon_emails
+#if we are import then we are also sending the mail through amazon_emails also
+#means twoo emails are send
 
 smtp_server = 'email-smtp.eu-west-1.amazonaws.com'
 smtp_username = 'AKIAJSP64C3S2ZASXBIA'

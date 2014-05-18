@@ -130,8 +130,6 @@ Subject: SMTP HTML e-mail test
 		<td></td>
 	</tr>
 </table><!-- /FOOTER -->
-
-Hello, this is dog.
 """
 
 print "Message length is " + repr(len(msg))
