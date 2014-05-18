@@ -1,3 +1,4 @@
+<!-- >
 <html lang="en" class="no-js">
 <head>
     <meta charset="utf-8">
@@ -80,104 +81,98 @@
 </head>
 
 <body>
-<div id="topmenu " class="" style="width:100%;">
-    <ul class="dropdown clearfix boxed ">
-        <li class="pull-right">
-            <a href="#">
-                <i class="icon-menu"></i>
-                <span>check in</span>
-                <sup class="note">3</sup>
-            </a>
-        </li>
-        <li class="pull-right">
-            <a href="#">
-                <i class="icon-menu icon-menu2"></i>
-                <span>events</span>
-            </a>
-        </li>
-        <li class="pull-right"> 
-            <a href="#">
-                <i class="icon-menu icon-menu3"></i>
-                <span>account</span>
-            </a>
-            <ul>
-                <li><a href="#">Web design</a></li>
-                <li><a href="#">User interface</a></li>
-                <li><a href="#">Social media</a>
-                    <ul>
-                        <li><a href="#">Gallery images</a></li>
-                        <li><a href="#">Fine Slider</a></li>
-                        <li><a href="#">Video in header</a></li>
-                        <li><a href="#">Video Slider</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li class="pull-right">
-            <a href="#">
-                <i class="icon-menu icon-menu4"></i>
-                <span>settings</span>
-            </a>
-        </li>
-    </ul>
-</div>
+    <div id="topmenu " class="" style="width:100%;">
+        <ul class="dropdown clearfix boxed ">
+            <li class="pull-right">
+                <a href="#">
+                    <i class="icon-menu"></i>
+                    <span>check in</span>
+                    <sup class="note">3</sup>
+                </a>
+            </li>
+            <li class="pull-right">
+                <a href="#">
+                    <i class="icon-menu icon-menu2"></i>
+                    <span>events</span>
+                </a>
+            </li>
+            <li class="pull-right"> 
+                <a href="#">
+                    <i class="icon-menu icon-menu3"></i>
+                    <span>account</span>
+                </a>
+                <ul>
+                    <li><a href="#">Web design</a></li>
+                    <li><a href="#">User interface</a></li>
+                    <li><a href="#">Social media</a>
+                        <ul>
+                            <li><a href="#">Gallery images</a></li>
+                            <li><a href="#">Fine Slider</a></li>
+                            <li><a href="#">Video in header</a></li>
+                            <li><a href="#">Video Slider</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="pull-right">
+                <a href="#">
+                    <i class="icon-menu icon-menu4"></i>
+                    <span>settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 
 
-<div  >
-	<div class="col-lg-2">
-		<div class="widget-container widget_calendar  "  >
-		    	<div class="inner" >
-		        	<input style="height:200px;style="border:1px solid blue"" type="text" name="date_departure2" class="inputField " value="" id="date_departure2">
-		   		</div>
-			</div>
+    <div  >
+    	<div class="col-lg-2">
+    		<div class="widget-container widget_calendar  "  >
+    		    	<div class="inner" >
+    		        	<input style="height:200px;style="border:1px solid blue"" type="text" name="date_departure2" class="inputField " value="" id="date_departure2">
+    		   		</div>
+    			</div>
 
-	</div>
-	<div class="col-lg-10">
-		<div class="tab" style="">
-{% for event in events%}
-		
-		
+    	</div>
+    	<div class="col-lg-10">
+    		<div class="tab" style="">
+            {% for event in events %}
 
-			
-				<div class="widget-container widget_avatar boxed col-md-5" >
-				    <div class="avatar-image">
-				        <img src="static/metro-vibes-css/images/temp/avatar-image.jpg" alt="" />
-				    </div>
-				    <div class="inner clearfix">
-				        <div class="avatar">
-				            <img src="static/metro-vibes-css/images/temp/avatar.png" alt="" />
-				        </div>
-				        <h4>HOSTED BY: {{event.username}}</h4>
-				        <h5> Srinath</h5>
-				        <span class="subtitle">
-				            {{event.surname}}
-				        </span>
-				    </div>
-				    <div class="post-meta-links">
-				        <ul class="clearfix">
-				            <li class="post-view">
-				                <a href="#"><span><i class="icon-post"></i>{{event.views}}</span></a>
-				            </li>
-				            <li class="post-comm">
-				                <a href="#"><span><i class="icon-post"></i>{{event.categories}}</span></a>
-				            </li>
-				            <li class="post-like">
-				                <a href="#"><span><i class="icon-post"></i>210</span></a>
-				            </li>
-				        </ul>
-				    </div>
-				</div>
-			
-            
-		
-		
-		{%endfor%}
-        </div>
-	</div>
-</div>
+    				<div class="widget-container widget_avatar boxed col-md-3" >
+    				    <div class="avatar-image">
+    				        <img src="static/metro-vibes-css/images/temp/avatar-image.jpg" alt="" />
+    				    </div>
+    				    <div class="inner clearfix">
+    				        <div class="avatar">
+    				            <img src="static/metro-vibes-css/images/temp/avatar.png" alt="" />
+    				        </div>
+    				        <h4>HOSTED BY: {{event['username']}}</h4>
+    				        <h5> Srinath</h5>
+    				        <span class="subtitle">
+    				            {{event.surname}}
+    				        </span>
+    				    </div>
+    				    <div class="post-meta-links">
+    				        <ul class="clearfix">
+    				            <li class="post-view">
+    				                <a href="#"><span><i class="icon-post"></i>{{event.views}}</span></a>
+    				            </li>
+    				            <li class="post-comm">
+    				                <a href="#"><span><i class="icon-post"></i>{{event.categories}}</span></a>
+    				            </li>
+    				            <li class="post-like">
+    				                <a href="#"><span><i class="icon-post"></i>210</span></a>
+    				            </li>
+    				        </ul>
+    				    </div>
+    				</div>
+    		
+    		{% endfor %}
+            </div>
+    	</div>
+    </div>
 </body>
 </html>
-<!-- >
+<-->
 <html>
   <head>
     {% if title %}
@@ -197,6 +192,6 @@
 </html>
 
 <!doctype html>
-<-->
+
 
 

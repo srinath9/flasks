@@ -33,28 +33,17 @@ def main():
     name = []
     x =0
     users = dbh.urers.find({"firstname":"Jane"})
+
     users = convert(users)
-    users = json.dumps(name, default=json_util.default)
+    # users = json.dumps(name, default=json_util.default)
     return users
 
 @app.route('/events')
 def con():
-    note = main()
-    # print note
-    # print "done"
-   # print note.getCollectionNames()
-    # print "done"
-    # for no in note:
-        
-    #     print no.get("email")
-    # print "donme"
-    
-    # print note.count()
-    print note
-    print len(note)   
-
-    return note
-
+    notes = main()
+    print notes
+    return render_template("events.html",events= notes)
+    # return notes
 def name_event(name):
     try:
         c = Connection(host="localhost", port=27017)
