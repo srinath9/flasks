@@ -1,42 +1,49 @@
 import smtplib
- 
-from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.MIMEText import MIMEText
 import os
-import re
- 
-SMTP_SERVER = 'smtp.gmail.com'
-SMTP_PORT = 587
- 
-sender = 'ksrinathchowdary9@gmail.com'
-password = 'gabbar9347'
-recipient = 'kodalizzzzz434@gmail.com'
-subject = 'Python emaillib Test'
-message = 'Images attached.'
+import smtplib
+import mimetypes
+from email.MIMEMultipart import MIMEMultipart
+from email.MIMEBase import MIMEBase
+from email.MIMEText import MIMEText
+from email.MIMEAudio import MIMEAudio
+from email.MIMEImage import MIMEImage
+from email.Encoders import encode_base64
+import amazon_emails
 
-def main():
+smtp_server = 'email-smtp.eu-west-1.amazonaws.com'
+smtp_username = 'AKIAJSP64C3S2ZASXBIA'
+smtp_password = 'ArcrhJNW+OEiGNoAaHSMKF3Iq8Sqrs44uwR83cGJw8zv'
+smtp_port = '587'
+smtp_do_tls = True
+subject = "sending attachment"
+fromEmail = "ksrinathchowdary9@gmail.com"
+toEmail = "kodalizzzzz434@gmail.com"
+filename = "error.txt"
+template = amazon_emails.msg1
+
+def send_message(smtp_server,smtp_username,smtp_password,smtp_port,smtp_do_tls,fromEmail,toEmail,subject,filename,template):
     msg = MIMEMultipart()
-    msg['Subject'] = 'Python emaillib Test'
-    msg['To'] = recipient
-    msg['From'] = sender
-    session = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
-    session.ehlo()
-    session.starttls()
-    session.ehlo
-    session.login(sender, password)
+    msg['Subject'] = subject
+    msg['From'] = fromEmail
+    body = template
+    print filename
+    attachment = MIMEText(filename.read())
+    attachment.set_payload(filename.read())
+    filename.close()
+    attachment.add_header('Content-Disposition', 'attachment', filename=filename)
+    msg.attach(attachment)
+    content = MIMEText(body, 'plain')
+    msg.attach(content)
 
-    path = "/home/srinath/Music/iota/static/metro-vibes-css/images/temp/avatar6.png"
-    img = MIMEImage(open(path, 'rb').read(), _subtype="png")
-    img.add_header('Content-Disposition', 'attachment', filename=filename)
-    msg.attach(img)
-
-  #   part = MIMEText('text', "plain")
- 	# part.set_payload(message)
- 	
-    msg.attach(part)
-    session.sendmail(sender, recipient, msg.as_string())
-    session.quit()
+    server = smtplib.SMTP(smtp_server, smtp_port)
+    server.set_debuglevel(10)
+    server.starttls()
+    server.ehlo()
+    server.login(smtp_username,smtp_password)
+    server.sendmail(fromEmail, toEmail, msg.as_string()) 
 
 if __name__ == '__main__':
-    main()
+    send_message(smtp_server,smtp_username,smtp_password,smtp_port,smtp_do_tls,fromEmail,toEmail,subject,filename,template)
