@@ -21,21 +21,20 @@ smtp_do_tls = True
 subject = "sending attachment"
 fromEmail = "ksrinathchowdary9@gmail.com"
 toEmail = "kodalizzzzz434@gmail.com"
-filename = "error.txt"
-template = amazon_emails.msg1
+file_name = "error.txt"
+template = amazon_emails.msg
 
-def send_message(smtp_server,smtp_username,smtp_password,smtp_port,smtp_do_tls,fromEmail,toEmail,subject,filename,template):
+def send_message(smtp_server,smtp_username,smtp_password,smtp_port,smtp_do_tls,fromEmail,toEmail,subject,file_name,template):
     msg = MIMEMultipart()
-    msg['Subject'] = subject
     msg['From'] = fromEmail
     body = template
-    print filename
-    attachment = MIMEText(filename.read())
-    attachment.set_payload(filename.read())
-    filename.close()
-    attachment.add_header('Content-Disposition', 'attachment', filename=filename)
+    file_read = open(file_name,"rb")
+    attachment = MIMEText(file_read.read())
+    attachment.set_payload(file_read.read())
+    
+    attachment.add_header('Content-Disposition', 'attachment', filename="error.txt")
     msg.attach(attachment)
-    content = MIMEText(body, 'plain')
+    content = MIMEText(body, 'html')
     msg.attach(content)
 
     server = smtplib.SMTP(smtp_server, smtp_port)
@@ -46,4 +45,4 @@ def send_message(smtp_server,smtp_username,smtp_password,smtp_port,smtp_do_tls,f
     server.sendmail(fromEmail, toEmail, msg.as_string()) 
 
 if __name__ == '__main__':
-    send_message(smtp_server,smtp_username,smtp_password,smtp_port,smtp_do_tls,fromEmail,toEmail,subject,filename,template)
+    send_message(smtp_server,smtp_username,smtp_password,smtp_port,smtp_do_tls,fromEmail,toEmail,subject,file_name,template)
