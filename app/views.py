@@ -4,7 +4,7 @@ import task_db
 
 @app.route('/events', methods=['GET'])
 def get_all_tasks():
-    return jsonify(task_db.fetch_all_tasks())
+	return render_template("events.html",events = task_db.fetch_all_tasks())
 
 @app.route('/events', methods=['POST'])
 def create_task():

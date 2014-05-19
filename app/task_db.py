@@ -13,7 +13,8 @@ def fetch_all_tasks():
 	for row in rows:
 		data = row
 		print row[7]
-		data[7] = datetime.strftime(row[7],"YYYY-MM-DD")
+		print row[1]
+		# data[7] = datetime.strftime(row[7],"YYYY-MM-DD")
 		events.append(data)
 		print data[7]
 	return events
