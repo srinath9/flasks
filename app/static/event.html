@@ -1,0 +1,271 @@
+<!doctype html>
+<!--[if lt IE 8 ]><html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>City Break | The Basics</title>
+
+    <!-- main JS libs -->
+    <script src="city-break/city-break-css/js/libs/jquery-1.10.2.min.js"></script>
+    <script src="city-break/city-break-css/js/libs/jquery-ui.min.js"></script>
+    <script src="city-break/city-break-css/js/libs/bootstrap.min.js"></script>
+
+    <!-- Style CSS -->
+    <link href="city-break/city-break-css/css/bootstrap.css" media="screen" rel="stylesheet">
+    <link href="city-break/city-break-css/style.css" media="screen" rel="stylesheet">
+
+    <!-- General Scripts -->
+    <script src="city-break/city-break-css/js/general.js"></script>
+
+    <!-- custom input -->
+    <script src="city-break/city-break-css/js/jquery.customInput.js"></script>
+
+    <!-- Placeholders -->
+    <script src="city-break/city-break-css/js/jquery.powerful-placeholder.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            if($("[placeholder]").size() > 0) {
+                $.Placeholder.init();
+            }
+        });
+    </script>
+
+    <!-- CarouFredSel  -->
+    <script src="city-break/city-break-css/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+
+    <!-- Lightbox prettyPhoto -->
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <script src="city-break/city-break-css/js/jquery.prettyPhoto.js"></script>
+
+    <!-- Video Player -->
+    <link href="city-break/city-break-css/css/video-js.css" rel="stylesheet">
+    <script src="city-break/city-break-css/js/video.js"></script>
+    <script>
+        videojs.options.flash.swf = "city-break/city-break-css/js/video-js.swf";
+    </script>
+
+    <!-- Audio Player -->
+    <link href="city-break/city-break-css/css/jplayer.css" rel="stylesheet">
+    <script src="city-break/city-break-css/js/jquery.jplayer.min.js"></script>
+    <script src="city-break/city-break-css/js/jplayer.playlist.min.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        $(document).ready(function(){
+
+            new jPlayerPlaylist({
+                jPlayer: "#jquery_jplayer_1",
+                cssSelectorAncestor: "#jp_container_1"
+            }, [
+                {
+                    title:"<div class='item-image'><img src='city-break/city-break-css/images/temp/music-player-1.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Beyoncé</span><span class='item-song'>Love on Top</span></div>",
+                    mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                    oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+                },
+                {
+                    title:"<div class='item-image'><img src='city-break/city-break-css/images/temp/music-player-2.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Lene Marlin</span><span class='item-song'>Unforgivable Sinner</span></div>",
+                    mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                    oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+                },
+                {
+                    title:"<div class='item-image'><img src='city-break/city-break-css/images/temp/music-player-3.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Toby Lightman</span><span class='item-song'>Lets go Racing Boys</span></div>",
+                    mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                    oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+                }
+            ], {
+                swfPath: "js",
+                supplied: "oga, mp3",
+                wmode: "window",
+                smoothPlayBar: false,
+                keyEnabled: false
+            });
+        });
+        //]]>
+    </script>
+
+    <!-- Calendar -->
+    <script src="city-break/city-break-css/js/jquery-ui.multidatespicker.js"></script>
+
+    <!-- range sliders -->
+    <script src="city-break/city-break-css/js/jquery.slider.bundle.js"></script>
+    <script src="city-break/city-break-css/js/jquery.slider.js"></script>
+    <link href="city-break/city-break-css/css/jslider.css" rel="stylesheet">
+
+    <!-- Graph Builder -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <!-- Visual Text Editor -->
+    <script src="city-break/city-break-css/js/nicEdit.js"></script>
+
+    <!-- Multiselect (Chosen.js) -->
+    <link rel="stylesheet" href="city-break/city-break-css/css/chosen.css">
+    <script src="city-break/city-break-css/js/chosen.jquery.min.js"></script>
+
+<!--[if lt IE 9]><script src="city-break/city-break-css/js/respond.min.js"></script><![endif]-->
+</head>
+
+<body>
+<div class="tabs-framed tabs-small boxed">
+<ul class="tabs clearfix">
+    <li class="active"><a href="#events" data-toggle="tab">Events</a></li>
+    <li><a href="#reminders" data-toggle="tab">Reminders</a></li>
+    <li><a href="#starred" data-toggle="tab">Starred</a></li>
+    <li><a href="#archive" data-toggle="tab">Archive</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade in active" id="events">
+        <!-- Price item -->
+        <div class="price-item style4">
+            <div class="price-content clearfix">
+                <div class="price-content-left">
+                    <div class="price-image">
+                        <img src="city-break/city-break-css/images/temp/price-img-13.jpg" alt="" />
+                        <a href="#" class="badge badge-red"><span class="glyphicon glyphicon-heart"></span></a>
+                    </div>
+                </div>
+                <div class="price-content-right">
+                    <span class="price-info">10 Days Only</span>
+                    <h2 class="price-title"><a href="#">Special offer</a></h2>
+                    <div class="price-desc">
+                        <p>Rooms at La Margherita are simply decorate and feature antique wood furniture. They all have free Wi-Fi access.</p>
+                    </div>
+                    <div class="price clearfix">
+                        <strong><sup>$</sup>99</strong>
+                        <span>per<br />night</span>
+                        <i class="icon-price double"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="price-bottom clearfix">
+                <span class="price-info">Sale Ends 31.05</span>
+                <a href="#" class="price-reserve">Other hot deals</a>
+            </div>
+        </div>
+        <!--/ Price item -->
+    </div>
+
+    <div class="tab-pane fade" id="reminders">
+        <!-- Price item -->
+        <div class="price-item style4">
+            <div class="price-content clearfix">
+                <div class="price-content-left">
+                    <div class="price-image">
+                        <img src="city-break/city-break-css/images/temp/price-img-1.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="price-content-right">
+                    <span class="price-info">8 Days Only</span>
+                    <h2 class="price-title"><a href="#">Limited offer</a></h2>
+                    <div class="price-desc">
+                        <p>Rooms at La Margherita are simply decorate and feature antique wood furniture. They all have free Wi-Fi access.</p>
+                    </div>
+                    <div class="price clearfix">
+                        <strong><sup>$</sup>199</strong>
+                        <span>per<br />night</span>
+                        <i class="icon-price triple"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="price-bottom clearfix">
+                <span class="price-info">Sale Ends 26.05</span>
+                <a href="#" class="price-reserve">Reserve</a>
+            </div>
+        </div>
+        <!--/ Price item -->
+    </div>
+
+    <div class="tab-pane fade" id="starred">
+        <!-- Price item -->
+        <div class="price-item style4">
+            <div class="price-content clearfix">
+                <div class="price-content-left">
+                    <div class="price-image">
+                        <img src="city-break/city-break-css/images/temp/price-img-13.jpg" alt="" />
+                        <a href="#" class="badge"><span class="glyphicon glyphicon-tags"></span></a>
+                    </div>
+                </div>
+                <div class="price-content-right">
+                    <span class="price-info">14 Days Only</span>
+                    <h2 class="price-title"><a href="#">Special offer</a></h2>
+                    <div class="price-desc">
+                        <p>Rooms at La Margherita are simply decorate and feature antique wood furniture. They all have free Wi-Fi access.</p>
+                    </div>
+                    <div class="price clearfix">
+                        <strong><sup>$</sup>149</strong>
+                        <span>per<br />night</span>
+                        <i class="icon-price double"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="price-bottom clearfix">
+                <span class="price-info">Sale Ends 26.06</span>
+                <a href="#" class="price-reserve">Other hot deals</a>
+            </div>
+        </div>
+        <!--/ Price item -->
+    </div>
+
+    <div class="tab-pane fade" id="archive">
+        <!-- Price item -->
+        <div class="price-item style4">
+            <div class="price-content clearfix">
+                <div class="price-content-left">
+                    <div class="price-image">
+                        <img src="city-break/city-break-css/images/temp/price-img-1.jpg" alt="" />
+                        <a href="#" class="badge badge-red"><span class="glyphicon glyphicon-tags"></span></a>
+                    </div>
+                </div>
+                <div class="price-content-right">
+                    <span class="price-info">6 Days Only</span>
+                    <h2 class="price-title"><a href="#">New offer</a></h2>
+                    <div class="price-desc">
+                        <p>Rooms at La Margherita are simply decorate and feature antique wood furniture. They all have free Wi-Fi access.</p>
+                    </div>
+                    <div class="price clearfix">
+                        <strong><sup>$</sup>89</strong>
+                        <span>per<br />night</span>
+                        <i class="icon-price"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="price-bottom clearfix">
+                <span class="price-info">Sale Ends 20.05</span>
+                <a href="#" class="price-reserve">Reserve</a>
+            </div>
+        </div>
+        <!--/ Price item -->
+    </div>
+</div>
+                    
+<!-- tags-->
+<div class="widget-container widget-tags styled boxed col-md-3">
+    <div class="inner">
+        <h3 class="widget-title">Tags<i></i></h3>
+        <div class="tagcloud clearfix">
+            <a href="#"><span>Rooms</span></a>
+            <a href="#"><span>Simple</span></a>
+            <a href="#"><span>Decorated</span></a>
+            <a href="#"><span>Wood</span></a>
+            <a href="#"><span>Furniture</span></a>
+            <a href="#"><span>Feature</span></a>
+            <a href="#"><span>Conditioning</span></a>
+            <a href="#"><span>Hotels</span></a>
+            <a href="#"><span>Glasses</span></a>
+            <a href="#"><span>Rooms</span></a>
+            <a href="#"><span>Simple</span></a>
+            <a href="#"><span>Decorated</span></a>
+        </div>
+    </div>
+</div>
+
+
+
+                       
+   
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+    <!--[if lt IE 8 ]><html lang="en" class="ie7"> <![endif]-->
+    <!--[if IE 8 ]><html lang="en" class="ie8"> <![endif]-->
+    <!--[if IE 9 ]><html lang="en" class="ie9"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>City Break | The Basics</title>
+
+    <!-- main JS libs -->
+    <script src="city-break/city-break-css/js/libs/jquery-1.10.2.min.js"></script>
+    <script src="city-break/city-break-css/js/libs/jquery-ui.min.js"></script>
+    <script src="city-break/city-break-css/js/libs/bootstrap.min.js"></script>
+
+    <!-- Style CSS -->
+    <link href="city-break/city-break-css/css/bootstrap.css" media="screen" rel="stylesheet">
+    <link href="city-break/city-break-css/style.css" media="screen" rel="stylesheet">
+
+    <!-- General Scripts -->
+    <script src="city-break/city-break-css/js/general.js"></script>
+
+    <!-- custom input -->
+    <script src="city-break/city-break-css/js/jquery.customInput.js"></script>
+
+    <!-- Placeholders -->
+    <script src="city-break/city-break-css/js/jquery.powerful-placeholder.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            if($("[placeholder]").size() > 0) {
+                $.Placeholder.init();
+            }
+        });
+    </script>
+
+    <!-- CarouFredSel  -->
+    <script src="city-break/city-break-css/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+
+    <!-- Lightbox prettyPhoto -->
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <script src="city-break/city-break-css/js/jquery.prettyPhoto.js"></script>
+
+    <!-- Video Player -->
+    <link href="city-break/city-break-css/css/video-js.css" rel="stylesheet">
+    <script src="city-break/city-break-css/js/video.js"></script>
+    <script>
+        videojs.options.flash.swf = "city-break/city-break-css/js/video-js.swf";
+    </script>
+
+    <!-- Audio Player -->
+    <link href="city-break/city-break-css/css/jplayer.css" rel="stylesheet">
+    <script src="city-break/city-break-css/js/jquery.jplayer.min.js"></script>
+    <script src="city-break/city-break-css/js/jplayer.playlist.min.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        $(document).ready(function(){
+
+            new jPlayerPlaylist({
+                jPlayer: "#jquery_jplayer_1",
+                cssSelectorAncestor: "#jp_container_1"
+            }, [
+                {
+                    title:"<div class='item-image'><img src='city-break/city-break-css/images/temp/music-player-1.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Beyoncé</span><span class='item-song'>Love on Top</span></div>",
+                    mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                    oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+                },
+                {
+                    title:"<div class='item-image'><img src='city-break/city-break-css/images/temp/music-player-2.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Lene Marlin</span><span class='item-song'>Unforgivable Sinner</span></div>",
+                    mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                    oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+                },
+                {
+                    title:"<div class='item-image'><img src='city-break/city-break-css/images/temp/music-player-3.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Toby Lightman</span><span class='item-song'>Lets go Racing Boys</span></div>",
+                    mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                    oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+                }
+            ], {
+                swfPath: "js",
+                supplied: "oga, mp3",
+                wmode: "window",
+                smoothPlayBar: false,
+                keyEnabled: false
+            });
+        });
+        //]]>
+    </script>
+
+    <!-- Calendar -->
+    <script src="city-break/city-break-css/js/jquery-ui.multidatespicker.js"></script>
+
+    <!-- range sliders -->
+    <script src="city-break/city-break-css/js/jquery.slider.bundle.js"></script>
+    <script src="city-break/city-break-css/js/jquery.slider.js"></script>
+    <link href="city-break/city-break-css/css/jslider.css" rel="stylesheet">
+
+    <!-- Graph Builder -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <!-- Visual Text Editor -->
+    <script src="city-break/city-break-css/js/nicEdit.js"></script>
+
+    <!-- Multiselect (Chosen.js) -->
+    <link rel="stylesheet" href="city-break/city-break-css/css/chosen.css">
+    <script src="city-break/city-break-css/js/chosen.jquery.min.js"></script>
+
+</head>
+
+<body>
+<div class="widget-container widget-tags styled boxed col-md-3">
+    <div class="inner">
+        <h3 class="widget-title">Tags<i></i></h3>
+        <div class="tagcloud clearfix">
+            <a href="#"><span>Rooms</span></a>
+            <a href="#"><span>Simple</span></a>
+            <a href="#"><span>Decorated</span></a>
+            <a href="#"><span>Wood</span></a>
+            <a href="#"><span>Furniture</span></a>
+            <a href="#"><span>Feature</span></a>
+            <a href="#"><span>Conditioning</span></a>
+            <a href="#"><span>Hotels</span></a>
+            <a href="#"><span>Glasses</span></a>
+            <a href="#"><span>Rooms</span></a>
+            <a href="#"><span>Simple</span></a>
+            <a href="#"><span>Decorated</span></a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
