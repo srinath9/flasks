@@ -15,14 +15,14 @@ import amazon_emails
 #if we are import then we are also sending the mail through amazon_emails also
 #means twoo emails are send
 
-smtp_server = 'email-smtp.eu-west-1.amazonaws.com'
-smtp_username = 'AKIAJSP64C3S2ZASXBIA'
-smtp_password = 'ArcrhJNW+OEiGNoAaHSMKF3Iq8Sqrs44uwR83cGJw8zv'
+smtp_server = 'fet_server_name'
+smtp_username = 'get name'
+smtp_password = 'get password'
 smtp_port = '587'
 smtp_do_tls = True
 subject = "sending attachment"
-fromEmail = "ksrinathchowdary9@gmail.com"
-toEmail = "kodalizzzzz434@gmail.com"
+fromEmail = "email@example.com"
+toEmail = "to@email.com'
 file_name = "error.txt"
 template = amazon_emails.msg
 
