@@ -9,9 +9,9 @@ import re
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
  
-sender = 'ksrinathchowdary9@gmail.com'
-password = 'gabbar9347'
-recipient = 'kodalizzzzz434@gmail.com'
+sender = 'my@email.com'
+password = 'password'
+recipient = 'toaddr@email.com'
 subject = 'Python emaillib Test'
 message = 'Images attached.'
  
