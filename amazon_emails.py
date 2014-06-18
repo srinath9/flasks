@@ -135,9 +135,9 @@ Subject: SMTP HTML e-mail test
 print "Message length is " + repr(len(msg))
 
 #Change according to your settings
-smtp_server = 'email-smtp.eu-west-1.amazonaws.com'
-smtp_username = 'AKIAJSP64C3S2ZASXBIA'
-smtp_password = 'ArcrhJNW+OEiGNoAaHSMKF3Iq8Sqrs44uwR83cGJw8zv'
+smtp_server = 'get_server'
+smtp_username = 'get username'
+smtp_password = 'set password'
 smtp_port = '587'
 smtp_do_tls = True
 
