@@ -4,9 +4,9 @@ import smtplib
 def prompt(prompt):
     return raw_input(prompt).strip()
 
-fromaddr = 'srinath.kodali@outlook.com'
-toaddrs  = 'kodalizzzzz434@gmail.com'
-msg = """From: ksrinathchowdary9@gmail.com
+fromaddr = 'from@email.com'
+toaddrs  = 'toaddr@email.com'
+msg = """From: 
 MIME-Version: 1.0
 Content-type: text/html
 Subject: SMTP HTML e-mail test
